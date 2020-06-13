@@ -22,13 +22,11 @@ def iplookup(ip_addr, dns_srv):
     ip_resolver.nameservers = [dns_srv]
     ip_reverse.nameservers = [dns_srv]
     ip_rev = ip_reverse.from_address(ip_addr)
-    domain_name = ip_resolver.query(ip_rev, 'PTR')
-    return domain_name
+    return ip_resolver.query(ip_rev, 'PTR')
     
 def whois(ip_addr):
     query = IPWhois(ip_addr)
-    whois_ans = query.lookup()
-    return whois_ans
+    return query.lookup()
 
 def pull_url(ip_addr):
     filename = ip_addr + ".txt"

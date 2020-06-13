@@ -14,8 +14,12 @@ from datetime import date
 
 def casenumber(counter):
     today_date = date.today()
-    case_num = str(today_date.year)+str(today_date.month)+str(today_date.day)+str(counter)
-    return case_num
+    return (
+        str(today_date.year)
+        + str(today_date.month)
+        + str(today_date.day)
+        + str(counter)
+    )
 
 def new_case(casenumber, database):
     evdb = sqlite3.connect(database)

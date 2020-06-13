@@ -14,8 +14,7 @@ from bitstring import BitArray, Bits
 # This is for the hash data piece 
 def hash_data_parse(parse_data):
     bit_values = BitArray(parse_data)
-    binary_values = bit_values.bin
-    return binary_values
+    return bit_values.bin
 
 # With this function, we added a line of code to call the hash_data_parse function
 # and then we print out the binary structures that are part of the record hash

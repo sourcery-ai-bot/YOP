@@ -16,28 +16,22 @@ def make_directory(name, account):
     split_name = name.split(" ")
     directory_name = split_name[0], split_name[1], account
     separator = "_"
-    directory = separator.join(directory_name)
-    return directory
+    return separator.join(directory_name)
 
 def full_name_replace(name, line):
-    result_line = re.sub('<Full Name>', name, line)
-    return result_line
+    return re.sub('<Full Name>', name, line)
 
 def iphone_model_replace(iphone, line):
-    result_line = re.sub('<Model>', iphone, line)
-    return result_line
+    return re.sub('<Model>', iphone, line)
 
 def os_version_replace(ios, line):
-    result_line = re.sub('<OS Version>', ios, line)
-    return result_line
+    return re.sub('<OS Version>', ios, line)
 
 def passcode_replace(pin, line):
-    result_line = re.sub('<Passcode>', pin, line)
-    return result_line
+    return re.sub('<Passcode>', pin, line)
 
 def directory_replace(filename, line):
-    result_line = re.sub('<Directory Name>', filename, line)
-    return result_line
+    return re.sub('<Directory Name>', filename, line)
 
 file_to_search = sys.argv[1]
 

@@ -1,18 +1,19 @@
 """This file is designed to parse vsFTPd log files.  It will pull out the IP addresses and sort by 
 number of times the IP has connected to the server.  It will also do a dns lookup of the IP's and 
 try to resolve them. It needs dnspython installed for that part to work."""
+
+
 # Licensed under the GPL
 # http://www.gnu.org/copyleft/gpl.html
 #
 # Version 1.0
 # Tom Yarrish
-
 import sys
 import dns.resolver
 import dns.reversename
 
-ip_count = dict()
-ip_top_count = list()
+ip_count = {}
+ip_top_count = []
 
 def ip_lookup(ip_address_to_resolve):
     my_dns_resolver = dns.resolver.Resolver()

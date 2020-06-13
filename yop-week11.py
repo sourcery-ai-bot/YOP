@@ -17,8 +17,7 @@ from subprocess import Popen
 def fvde_key():
     chars = string.letters.upper() + string.digits
     pwdSize = 4
-    key_attempt = ''.join((random.choice(chars)) for x in range(pwdSize))
-    return key_attempt
+    return ''.join((random.choice(chars)) for x in range(pwdSize))
 
 # This is just setting up the different arguments to use for the program
 parser = argparse.ArgumentParser()

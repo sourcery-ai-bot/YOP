@@ -19,8 +19,7 @@ def trans_db_state(db_state):
                      4 : "JET_dbstateBeingConverted",
                      5 : "JET_dbstateForceDetach"
                      }
-    desc_db_state = dict_db_state[db_state]
-    return desc_db_state
+    return dict_db_state[db_state]
 
 # This is to work on the log position
 def log_position(logp):

@@ -16,8 +16,7 @@ import struct
 
 # This code parses the signature and version string; offset 0-27
 def ie_sig_ver_parse(decoder):
-    ie_sig_ver_func = decoder[0:28]
-    return ie_sig_ver_func
+    return decoder[0:28]
 
 # This code is to parse any of the four byte sections of the header
 def ie_ind_four_byte(decoder):

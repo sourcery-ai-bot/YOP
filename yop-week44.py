@@ -11,12 +11,10 @@
 import random
 
 def devide(x, y):
-    answer = x / y
-    return answer
+    return x / y
 
 def multeply(x,y):
-    answer = x * y
-    return answer
+    return x * y
 
 print "Welcome to the division testing program!"
 low_num = raw_input("What's the lowest number you want to use?" )

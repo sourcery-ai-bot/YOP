@@ -40,8 +40,7 @@ def dns_opcode_parse(opcode):
                    "N" : "Notify",
                    "U" : "Update",
                    "?" : "Unknown"}
-    opcode = dns_opcode[opcode]
-    return opcode
+    return dns_opcode[opcode]
 
 # This parses the DNS Flag Character codes
 def dns_flags_parse(flag):
@@ -50,10 +49,7 @@ def dns_flags_parse(flag):
                   "D" : "Recursion Desired",
                   "R" : "Recursion Available"}
     flaglist = list(flag)
-    flag_values = []
-    for flag_letter in flaglist:
-        flag_values.append(dns_flags[flag_letter])
-    return flag_values
+    return [dns_flags[flag_letter] for flag_letter in flaglist]
 
 # This removes the (#) from the hostnames and replaces them with periods
 def dns_question_name_parse(dns_name):

@@ -10,8 +10,7 @@ import string
 def fvde_key():
     chars = string.letters.upper() + string.digits
     pwdSize = 4
-    key_attempt = ''.join((random.choice(chars)) for x in range(pwdSize))
-    return key_attempt
+    return ''.join((random.choice(chars)) for x in range(pwdSize))
 
 # This function checks the generated key to see if we've seen it before
 def check_key(key_select, db):
